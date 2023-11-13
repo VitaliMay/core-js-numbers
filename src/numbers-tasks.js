@@ -110,7 +110,6 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,-1)    => π
  *   (0,-1) (1,0)    => π/2
  *   (0,1) (0,1)     => 0
- *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
   // throw new Error('Not implemented');
@@ -123,6 +122,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
 
 /**
  * Returns a last digit of a integer number.
+ * The input parameter will always be greater than or equal to zero and will be in decimal notation.
  *
  * @param {number} value
  * @return {number}
