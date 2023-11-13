@@ -73,7 +73,8 @@ function getAverage(value1, value2) {
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
   // throw new Error('Not implemented');
-  return Math.sqrt(Math.abs(x1 - x2) ** 2 + Math.abs(y1 - y2) ** 2);
+  return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
+  // return Math.sqrt(Math.abs(x1 - x2) ** 2 + Math.abs(y1 - y2) ** 2);
 }
 
 /**
@@ -511,7 +512,7 @@ function getFloatOnString(str) {
  * '4.567abcdefgh', 10  => 4
  * 'abcdefgh', 10       => NaN
  * '1.234', 2           => 1
- * '10', 8              => 1
+ * '10', 8              => 8
  */
 function getIntegerOnString(str, base) {
   // throw new Error('Not implemented');
