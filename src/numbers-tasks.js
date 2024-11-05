@@ -19,7 +19,6 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-  // throw new Error('Not implemented');
   return width * height;
 }
 
@@ -35,7 +34,6 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCircleCircumference(radius) {
-  // throw new Error('Not implemented');
   return 2 * Math.PI * radius;
 }
 
@@ -52,7 +50,6 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  // throw new Error('Not implemented');
   return value1 / 2 + value2 / 2;
 }
 
@@ -72,9 +69,7 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-  // throw new Error('Not implemented');
   return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
-  // return Math.sqrt(Math.abs(x1 - x2) ** 2 + Math.abs(y1 - y2) ** 2);
 }
 
 /**
@@ -90,7 +85,6 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-  // throw new Error('Not implemented');
   return (0 - b) / a;
 }
 
@@ -112,7 +106,6 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,1)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  // throw new Error('Not implemented');
   const scalar = x1 * x2 + y1 * y2;
   const vector01Length = Math.sqrt(x1 ** 2 + y1 ** 2);
   const vector02Length = Math.sqrt(x2 ** 2 + y2 ** 2);
@@ -134,10 +127,11 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  // throw new Error('Not implemented');
-  // return value.toString().slice(-1);
   return value % 10;
 }
+// function getLastDigit(value) {
+//   return value.toString().slice(-1);
+// }
 
 /**
  * Returns a number by given string representation.
@@ -151,7 +145,6 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-  // throw new Error('Not implemented');
   return parseFloat(value);
 }
 
@@ -169,7 +162,6 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelepipedDiagonal(a, b, c) {
-  // throw new Error('Not implemented');
   return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
@@ -191,7 +183,6 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-  // throw new Error('Not implemented');
   const powTen = 10 ** pow;
   return Math.round(num / powTen) * powTen;
 }
@@ -214,9 +205,7 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-  // throw new Error('Not implemented');
   if (n < 2) {
-    // так как 1 не является простым
     return false;
   }
   for (let i = 2; i <= Math.sqrt(n); i += 1) {
@@ -226,6 +215,18 @@ function isPrime(n) {
   }
   return true;
 }
+// function isPrime(n) {
+//   if (n < 2) {
+//     // так как 1 не является простым
+//     return false;
+//   }
+//   for (let i = 2; i <= Math.sqrt(n); i += 1) {
+//     if (n % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
 /**
  * Tries to convert value to number and returns it if conversion was successful;
@@ -243,7 +244,6 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  // throw new Error('Not implemented');
   if (value == null) {
     return def;
   }
@@ -266,7 +266,6 @@ function toNumber(value, def) {
  *   0  => 0
  */
 function getCube(num) {
-  // throw new Error('Not implemented');
   return num ** 3;
 }
 
@@ -287,10 +286,6 @@ function getFibonacciNumber(index) {
   if (index <= 1) {
     return index;
   }
-  // можно сделать рекурсию
-  // return getFibonacciNumber(index - 1) + getFibonacciNumber(index - 2);
-  // но мне больше нравится цикл
-
   let previous = 0;
   let current = 1;
 
@@ -302,6 +297,27 @@ function getFibonacciNumber(index) {
 
   return current;
 }
+// function getFibonacciNumber(index) {
+//   if (index <= 1) {
+//     return index;
+//   }
+//   // можно сделать рекурсию
+//   // return getFibonacciNumber(index - 1) + getFibonacciNumber(index - 2);
+//   // можно посчитать по формуле Бине, но ее хрен вспомнишь
+//   // ((((1 +  Math.sqrt(5)) / 2)**index - (((1 -  Math.sqrt(5)) / 2)**index) / Math.sqrt(5);
+//   // но мне больше нравится цикл
+
+//   let previous = 0;
+//   let current = 1;
+
+//   for (let i = 2; i <= index; i += 1) {
+//     const temp = previous + current;
+//     previous = current;
+//     current = temp;
+//   }
+
+//   return current;
+// }
 
 /**
  * Returns the sum of all numbers from 1 to n.
@@ -315,7 +331,6 @@ function getFibonacciNumber(index) {
  *   1  => 1
  */
 function getSumToN(n) {
-  // throw new Error('Not implemented');
   let result = 0;
   for (let i = 0; i <= n; i += 1) {
     result += i;
@@ -335,7 +350,6 @@ function getSumToN(n) {
  *   5   => 5  // 5
  */
 function getSumOfDigits(num) {
-  // throw new Error('Not implemented');
   let rezult = 0;
   let temp = num;
   while (temp) {
@@ -446,7 +460,6 @@ function toPrecision(number, precision) {
  * Number(-5)    => -5
  */
 function getNumberValue(number) {
-  // throw new Error('Not implemented');
   return number.valueOf();
 }
 
@@ -467,8 +480,11 @@ function getNumberValue(number) {
  */
 function isNumber(number) {
   return Number.isFinite(number) && !Number.isNaN(parseFloat(number));
-  // return Number.isFinite(number);
 }
+// function isNumber(number) {
+//   return Number.isFinite(number) && !Number.isNaN(parseFloat(number));
+//   // return Number.isFinite(number);
+// }
 
 /**
  * Returns a boolean value indicating whether a number is an integer or not.
@@ -482,7 +498,6 @@ function isNumber(number) {
  * '5'  => false
  */
 function isInteger(number) {
-  // throw new Error('Not implemented');
   return Number.isInteger(number);
 }
 
@@ -515,7 +530,6 @@ function getFloatOnString(str) {
  * '10', 8              => 8
  */
 function getIntegerOnString(str, base) {
-  // throw new Error('Not implemented');
   return Number.parseInt(str, base);
 }
 
@@ -531,7 +545,6 @@ function getIntegerOnString(str, base) {
  * 2 ** 53  => false
  */
 function isSafeInteger(number) {
-  // throw new Error('Not implemented');
   return Number.isSafeInteger(number);
 }
 
@@ -546,7 +559,6 @@ function isSafeInteger(number) {
  * -5.1 => -6
  */
 function roundToSmallestInteger(number) {
-  // throw new Error('Not implemented');
   return Math.floor(number);
 }
 
@@ -561,7 +573,6 @@ function roundToSmallestInteger(number) {
  * -5.9 => -5
  */
 function roundToLargestInteger(number) {
-  // throw new Error('Not implemented');
   return Math.ceil(number);
 }
 
@@ -577,7 +588,6 @@ function roundToLargestInteger(number) {
  * -5.5 => -5
  */
 function roundToNearestInteger(number) {
-  // throw new Error('Not implemented');
   return Math.round(number);
 }
 
@@ -593,7 +603,6 @@ function roundToNearestInteger(number) {
  * -5.5 => -5
  */
 function getIntegerPartNumber(number) {
-  // throw new Error('Not implemented');
   return Math.trunc(number);
 }
 
@@ -610,7 +619,6 @@ function getIntegerPartNumber(number) {
  * 0.1, 0.2, 0.3 => 0.6
  */
 function getSumOfNumbers(x1, x2, x3) {
-  // throw new Error('Not implemented');
   const sum = x1 + x2 + x3;
   return sum.toFixed(1);
 }
@@ -628,7 +636,6 @@ function getSumOfNumbers(x1, x2, x3) {
  * 0, 5   => 5
  */
 function getMaxNumber(firstNumber, secondNumber) {
-  // throw new Error('Not implemented');
   return Math.max(firstNumber, secondNumber);
 }
 
@@ -645,7 +652,6 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -1, 1 => -1 | 0 | 1
  */
 function getRandomInteger(min, max) {
-  // throw new Error('Not implemented');
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -661,7 +667,6 @@ function getRandomInteger(min, max) {
  */
 function getHypotenuse(a, b) {
   return Math.hypot(a, b);
-  // return Math.sqrt(a * a + b * b);
 }
 
 /**
